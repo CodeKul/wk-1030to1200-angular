@@ -3,7 +3,7 @@ let nm: string = 'android'
 function calc(num: number): void { }
 calc(10)
 
-let fn: (num: number) => void = function (num: number) { }
+let fn: (num: number) => void = function (num: number) { return }
 fn(10)
 
 let obj: {} = {
