@@ -19,6 +19,6 @@ export class Car implements GpsListener {
     }
 }
 
-let cr: Car = new Car() // cr is ORV(Object Reference Variable)
+let cr = new Car() // cr is ORV(Object Reference Variable)
 cr.incSpd()
 
