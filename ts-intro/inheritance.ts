@@ -14,6 +14,22 @@ class Tiger extends Animal {
 let an = new Animal()
 an.run()
 
-let tg : Tiger = new Tiger()
+let tg: Tiger = new Tiger()
 tg.run()
 tg.isAfrican()
+
+
+export class Circuit {
+
+}
+
+export class Machine {
+    constructor(
+        private cir: Circuit
+    ) {
+
+    }
+}
+
+let cr = new Circuit()
+let mcn = new Machine(cr)
