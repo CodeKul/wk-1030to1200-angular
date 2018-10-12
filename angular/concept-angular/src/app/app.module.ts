@@ -7,6 +7,7 @@ import { SmallFirstComponent } from './first/small-first/small-first.component';
 import { BtCrdComponent } from './bt-crd/bt-crd.component';
 import { BtJumbComponent } from './bt-jumb/bt-jumb.component';
 import { MyAlComponent } from './bt-crd/my-al.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MyAlComponent } from './bt-crd/my-al.component';
     SmallFirstComponent,
     BtCrdComponent,
     BtJumbComponent,
-    MyAlComponent
+    MyAlComponent,
+    DatabindingComponent
   ],
   imports: [
     BrowserModule
