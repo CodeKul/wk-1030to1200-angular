@@ -3,6 +3,7 @@
     <div class="alert alert-info">Welcome to {{nm}}</div>
     <div class="alert alert-info">Welcome to {{nm.toUpperCase()}}</div>
     <div class="alert alert-info">Welcome to {{amt * 5}}</div>
+    <div class="alert alert-info">Clicked Card is  {{clkCrd}}</div>
     <input type="{{typ}}" class="{{cls}}" value="Login">
   </div>
 </div>
@@ -11,7 +12,7 @@
     <input [type]="'button'" [class]="cls" [value]="nm">
   </div>
 </div>
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
     <div [class.jumbotron]="false">CodeKul Angular 6 training</div>
     <div [style.border]="'1px solid red'">CodeKul Angular 7 training</div>
@@ -27,9 +28,17 @@
   <div class="col-md-12">
     <input type="text" [(ngModel)]='anyThing'> {{anyThing}}
   </div>
-</div>
-<div class="row">
+</div> -->
+<!-- <div class="row">
   <div class="col-md-12">
     <app-bt-crd></app-bt-crd>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col-md-4">
+    <app-mx-crd [crd]="crd" (crdEv)="onCardClick($event)"></app-mx-crd>
+  </div>
+  <div class="col-md-4">
+    <app-mx-crd [crd]="{imgUrl :'https://www.traccar.org/images/server/feature-devices.svg', ttl :'Devices', msg :'Traccar supports more protocols and device models than any other GPS tracking system on the market. You can select GPS trackers from a variety of vendors from low cost Chinese models to high-end quality brands.'}" (crdEv)="onCardClick($event)"></app-mx-crd>
   </div>
 </div>

@@ -9,6 +9,7 @@ import { BtCrdComponent } from './bt-crd/bt-crd.component';
 import { BtJumbComponent } from './bt-jumb/bt-jumb.component';
 import { MyAlComponent } from './bt-crd/my-al.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { MxCrdComponent } from './mx-crd/mx-crd.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
     BtCrdComponent,
     BtJumbComponent,
     MyAlComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    MxCrdComponent
   ],
   imports: [
     BrowserModule,
