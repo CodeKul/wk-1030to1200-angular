@@ -11,6 +11,8 @@ export class DatabindingComponent implements OnInit {
   amt = 100
   typ = 'button'
   cls = 'btn btn-primary'
+  anyThing : string = 'codekul is great'
+
   constructor() {
   }
 
