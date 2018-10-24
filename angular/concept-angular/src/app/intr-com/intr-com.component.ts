@@ -10,6 +10,7 @@ export class IntrComComponent implements OnInit {
 
   prg : number = 0
   prgStr : string
+  rate : number
 
   constructor(  ) { }
 

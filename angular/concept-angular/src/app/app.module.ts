@@ -14,6 +14,11 @@ import { IntrComComponent } from './intr-com/intr-com.component';
 import { PrgBrComponent } from './intr-com/prg-br.component';
 import { BtnPnlComponent } from './intr-com/btn-pnl.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BarRatingModule } from "ngx-bar-rating";
+import { LoclRefComponent } from './locl-ref/locl-ref.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +31,14 @@ import { BtnPnlComponent } from './intr-com/btn-pnl.component';
     MxCrdComponent,
     IntrComComponent,
     PrgBrComponent,
-    BtnPnlComponent
+    BtnPnlComponent,
+    LoclRefComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    BarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
