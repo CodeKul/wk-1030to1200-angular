@@ -17,6 +17,9 @@ import { BtnPnlComponent } from './intr-com/btn-pnl.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BarRatingModule } from "ngx-bar-rating";
 import { LoclRefComponent } from './locl-ref/locl-ref.component';
+import { AlPrjComponent } from './locl-ref/al-prj.component';
+import { DirectivesComponent } from './directives/directives.component';
+
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { LoclRefComponent } from './locl-ref/locl-ref.component';
     IntrComComponent,
     PrgBrComponent,
     BtnPnlComponent,
-    LoclRefComponent
+    LoclRefComponent,
+    AlPrjComponent,
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,

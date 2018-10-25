@@ -17,9 +17,9 @@ export class LoclRefComponent implements OnInit {
   ngOnInit() {
   }
 
-  btnClk(val : string) {
-    //this.val = val
-    console.log(this.nm)
-    this.val = this.nm.nativeElement.value
-  }
+  // btnClk(val : string) {
+  //   //this.val = val
+  //   console.log(this.nm)
+  //   this.val = this.nm.nativeElement.value
+  // }
 }
