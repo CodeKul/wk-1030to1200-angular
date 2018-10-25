@@ -1,0 +1,27 @@
+import { Directive, HostBinding, HostListener } from '@angular/core';
+
+@Directive({
+  selector: '[appSample]'
+})
+export class SampleDirective {
+
+  @HostBinding('style.width')
+  wd : string
+
+  @HostBinding('class.brd')
+  brd : boolean
+
+  constructor() { }
+
+  @HostListener('mouseenter')
+  inBx() {
+    this.wd = '600px'
+    this.brd = false
+  }
+
+  @HostListener('mouseleave')
+  outBx() {
+    this.wd = '300px'
+    this.brd = true
+  }
+}

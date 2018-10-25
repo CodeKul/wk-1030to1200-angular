@@ -19,6 +19,7 @@ import { BarRatingModule } from "ngx-bar-rating";
 import { LoclRefComponent } from './locl-ref/locl-ref.component';
 import { AlPrjComponent } from './locl-ref/al-prj.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { SampleDirective } from './directives/sample.directive';
 
 
 
@@ -38,6 +39,7 @@ import { DirectivesComponent } from './directives/directives.component';
     LoclRefComponent,
     AlPrjComponent,
     DirectivesComponent,
+    SampleDirective,
   ],
   imports: [
     BrowserModule,
