@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-2"> Username
+  </div>
+  <div class="col-md-6">
+    <input type="text" #sv>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2"> Password
+  </div>
+  <div class="col-md-6">
+    <input type="text" #nm>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+      <input type="button" class="btn btn-primary" value="Okay" (click)="btnClk(sv.value,nm.value)">
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2"> Username
+    </div>
+    <div class="col-md-6">
+      {{val}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"> Password
+    </div>
+    <div class="col-md-6">
+        {{pass}}
+    </div>
+  </div>

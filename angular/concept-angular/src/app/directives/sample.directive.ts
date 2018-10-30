@@ -1,10 +1,11 @@
-import { Directive, HostBinding, HostListener } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appSample]'
 })
 export class SampleDirective {
 
+  @Input('appSample')
   @HostBinding('style.width')
   wd : string
 

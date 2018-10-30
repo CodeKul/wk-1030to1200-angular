@@ -1,3 +1,4 @@
+<html>
 <div class="container">
   <!-- <app-bt-jumb></app-bt-jumb>
   <div class="row">
@@ -26,5 +27,15 @@
   <!-- <app-databinding></app-databinding> -->
   <!-- <app-intr-com></app-intr-com> -->
   <!-- <app-locl-ref></app-locl-ref> -->
-  <app-directives></app-directives>
+  <!-- <app-directives></app-directives> -->
+  <!-- <app-logsrn></app-logsrn>
+  <app-zoom></app-zoom> -->
+
+  <app-lifecycle *ngIf="isVs" [myDt]="title"></app-lifecycle>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" class="btn" value="Okay" (click)="onClk()">
+    </div>
+  </div>
  </div>
+ </html>

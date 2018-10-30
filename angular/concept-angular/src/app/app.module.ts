@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -20,6 +21,11 @@ import { LoclRefComponent } from './locl-ref/locl-ref.component';
 import { AlPrjComponent } from './locl-ref/al-prj.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SampleDirective } from './directives/sample.directive';
+import { LogsrnComponent } from './logsrn/logsrn.component';
+import { ZoomComponent } from './zoom/zoom.component';
+import { SampDirective } from './zoom/samp.directive';
+import { UnlessDirective } from './directives/unless.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 
 
@@ -40,12 +46,19 @@ import { SampleDirective } from './directives/sample.directive';
     AlPrjComponent,
     DirectivesComponent,
     SampleDirective,
+    LogsrnComponent,
+    ZoomComponent,
+    SampDirective,
+    UnlessDirective,
+    LifecycleComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgbModule,
-    BarRatingModule
+    BarRatingModule,
+    NgxImageZoomModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

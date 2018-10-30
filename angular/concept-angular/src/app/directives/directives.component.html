@@ -21,6 +21,66 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <input type="text" appSample>
+    <input type="text" [appSample]="'500px'">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [appSample]="'100px'">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [appSample]="'300px'">
+  </div>
+</div>
+<div class="row alert">
+  <div class="col-md-12">
+    <input type="text" #usNm placeholder="UserName" >
+    <input type="text" #pass placeholder="Password">
+    <input type="button" value="Login" (click)="makeLogin(usNm.value, pass.value)" class="btn btn-info">
+  </div>
+</div>
+<!-- <div class="row" *ngIf="isLoggedIn">
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </div>
+</div> -->
+
+<ng-template [ngIf]="isLoggedIn">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="display-4">Condition is True</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+</ng-template>
+
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li *ngFor="let mb of mobs">{{mb.nm}} => {{mb.pz}}</li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    {{isLoggedIn}}
+  </div>
+</div>
+<div class="row" *appUnless="isLoggedIn">
+  <div class="jumbotron">
+    <h1 class="display-4">Unless Directive</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
   </div>
 </div>

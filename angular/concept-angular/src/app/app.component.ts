@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'concept-angular';
+  isVs = true
+
+  onClk() {
+    //this.isVs = !this.isVs
+    this.title = `${this.title}-${new Date().getTime()}`
+  }
 }
