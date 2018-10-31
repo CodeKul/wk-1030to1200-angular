@@ -1,3 +1,4 @@
+import { SampleService } from './services/sample.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -26,6 +27,7 @@ import { ZoomComponent } from './zoom/zoom.component';
 import { SampDirective } from './zoom/samp.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ServicesComponent } from './services/services.component';
 
 
 
@@ -51,6 +53,7 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     SampDirective,
     UnlessDirective,
     LifecycleComponent,
+    ServicesComponent,
     
   ],
   imports: [
@@ -60,7 +63,7 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     BarRatingModule,
     NgxImageZoomModule.forRoot()
   ],
-  providers: [],
+  providers: [SampleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
