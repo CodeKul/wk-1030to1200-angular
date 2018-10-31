@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SampleService } from './services/sample.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,11 @@ export class AppComponent {
   title = 'concept-angular';
   isVs = true
 
+  constructor(
+    private sample :  SampleService
+  ) {
+
+  }
   onClk() {
     //this.isVs = !this.isVs
     this.title = `${this.title}-${new Date().getTime()}`

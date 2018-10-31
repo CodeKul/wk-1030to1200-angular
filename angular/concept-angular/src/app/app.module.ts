@@ -28,6 +28,8 @@ import { SampDirective } from './zoom/samp.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ServicesComponent } from './services/services.component';
+import { AlcComponent } from './services/alc.component';
+import { DrpComponent } from './services/drp.component';
 
 
 
@@ -54,6 +56,8 @@ import { ServicesComponent } from './services/services.component';
     UnlessDirective,
     LifecycleComponent,
     ServicesComponent,
+    AlcComponent,
+    DrpComponent,
     
   ],
   imports: [

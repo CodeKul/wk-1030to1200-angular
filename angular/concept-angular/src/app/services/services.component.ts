@@ -10,10 +10,12 @@ import { SampleService } from './sample.service';
 export class ServicesComponent implements OnInit {
 
   cmpCntr : number = 0
+ 
 
   constructor(
     private sample : SampleService
-  ) { }
+  ) { 
+  }
 
   ngOnInit() {
   }
