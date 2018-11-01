@@ -30,6 +30,7 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ServicesComponent } from './services/services.component';
 import { AlcComponent } from './services/alc.component';
 import { DrpComponent } from './services/drp.component';
+import { DataService } from './services/data.service';
 
 
 
@@ -67,7 +68,7 @@ import { DrpComponent } from './services/drp.component';
     BarRatingModule,
     NgxImageZoomModule.forRoot()
   ],
-  providers: [SampleService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

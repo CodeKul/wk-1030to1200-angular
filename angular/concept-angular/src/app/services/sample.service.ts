@@ -1,11 +1,18 @@
 import { EventEmitter } from "@angular/core";
+import { DataService } from "./data.service";
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class SampleService {
 
   private cntr : number = 0
   private em : EventEmitter<string> = new EventEmitter()
 
-  constructor() { }
+  constructor(
+    private data :  DataService
+  ) { }
 
   plus() {
     return this.cntr++
