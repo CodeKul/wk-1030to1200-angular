@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <a [routerLink]="['login']">Login</a>
-    <a [routerLink]="['dash']">Dashboard</a>  
+    <a [routerLink]="['dash']" [queryParams]="{ spd : 100 , tmp : 200}">Dashboard</a>  
   </div>
-      <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
 
