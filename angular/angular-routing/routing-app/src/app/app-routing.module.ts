@@ -1,3 +1,4 @@
+import { DashGuard } from './dash/dash.guard';
 import { DashComponent } from './dash/dash.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,7 @@ const dashRoutes = [
 ]
 const routes: Routes = [
   {path : 'login', component : LoginComponent},
-  {path : 'dash/:usNm', component : DashComponent, children : dashRoutes},
+  {path : 'dash/:usNm', component : DashComponent, children : dashRoutes, canActivate : [DashGuard] },
   {path : 'dash', redirectTo : 'dash/ano'},
   {path : '', redirectTo : 'login', pathMatch : 'full'}
 ];
