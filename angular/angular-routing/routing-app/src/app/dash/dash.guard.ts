@@ -10,7 +10,12 @@ export class DashGuard implements CanActivate {
     next: ActivatedRouteSnapshot, 
     state: RouterStateSnapshot
     ): boolean {
+      console.log(next)
+      console.log(state)
 
-    return true;
+      if(next.params['usNm'] != 'android') {
+        return false
+      } 
+      return true
   }
 }

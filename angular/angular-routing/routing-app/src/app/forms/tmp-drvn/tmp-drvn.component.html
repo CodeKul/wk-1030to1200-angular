@@ -1,0 +1,50 @@
+<form class="form-horizontal" #myFrm="ngForm" (ngSubmit)="mySub(myFrm)">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Register Using Template Driven Stratergy</legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" #usNm="ngModel" ngModel required>
+        <p class="help-block text-muted" *ngIf="!usNm.valid">Username can contain any letters or numbers, without spaces</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" class="input-xlarge" #eml="ngModel" ngModel required [pattern]="emlPt">
+        <p class="help-block text-muted" *ngIf="eml.errors?.required">Please provide your E-mail</p>
+        <p class="help-block text-muted" *ngIf="eml.errors?.pattern">Email is invalid</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" placeholder="" #pass="ngModel" class="input-xlarge" ngModel required>
+        <p class="help-block text-muted" *ngIf="!pass.valid">Password should be at least 4 characters</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+      <div class="controls">
+        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+        <p class="help-block">Please confirm password</p>
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" [disabled]="!myFrm.valid">Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
