@@ -8,7 +8,8 @@
       <label class="control-label"  for="username">Username</label>
       <div class="controls">
         <input type="text" id="username" formControlName="usNm" placeholder="" class="input-xlarge">
-        <p *ngIf="!fg.controls.usNm.valid" class="help-block">Username can contain any letters or numbers, without spaces</p>
+        <p *ngIf="fg.controls.usNm.errors?.required" class="help-block">Username can contain any letters or numbers, without spaces</p>
+        <p *ngIf="fg.controls.usNm.errors?.isA" class="help-block">{{fg.controls.usNm.errors?.isA}}</p>
       </div>
     </div>
  
