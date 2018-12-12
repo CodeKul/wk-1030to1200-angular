@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      {{cnt}}
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #city>
+    <input type="button" value="Okay" class="btn" (click)="onWeather(city.value)">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <p>Latitude {{weather?.coord.lat}}</p>
+    <p>Longitute {{weather?.coord.lon}}</p>
+    <p>Temp {{weather?.main.temp}}</p>
+  </div>
+</div>
+

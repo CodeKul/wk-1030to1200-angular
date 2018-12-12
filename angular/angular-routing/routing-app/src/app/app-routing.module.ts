@@ -1,3 +1,4 @@
+import { HttpComponent } from './http/http.component';
 import { DtDrvnComponent } from './forms/dt-drvn/dt-drvn.component';
 import { FormsComponent } from './forms/forms/forms.component';
 import { DashGuard } from './dash/dash.guard';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path : 'dash/:usNm', component : DashComponent, children : dashRoutes, canActivate : [DashGuard] },
   {path : 'dash', redirectTo : 'dash/ano'},
   {path : '', redirectTo : 'login', pathMatch : 'full'},
-  {path : 'forms', component : FormsComponent, children : formsRoutes}
+  {path : 'forms', component : FormsComponent, children : formsRoutes},
+  {path:'http', component : HttpComponent}
 ];
 
 @NgModule({

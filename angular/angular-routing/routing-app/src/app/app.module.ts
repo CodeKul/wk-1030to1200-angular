@@ -1,3 +1,4 @@
+import { MyHttpModule } from './http/http.module';
 import { MyFormsModule } from './forms/forms.module';
 import { LoginModule } from './login/login.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,7 +17,8 @@ import { DashModule } from './dash/dash.module';
     AppRoutingModule,
     LoginModule,
     DashModule,
-    MyFormsModule
+    MyFormsModule,
+    MyHttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
