@@ -1,9 +1,16 @@
-var fs = require('fs');
-var pdf = require('html-pdf');
-var html = fs.readFileSync('./inn.html', 'utf8');
-var options = { format: 'Letter' };
+var dynInv = require('./dynamicinv')
 
-pdf.create(html, options).toFile('./inn.pdf', function(err, res) {
-    if (err) return console.log(err);
-    console.log(res); // { filename: '/app/businesscard.pdf' }
-});
+dynInv.createInv({
+    title : 'Simple Inovoice',
+    invNo : 78956,
+    dateCreated : '1st June 2018',
+    dueDate : '3rd Nov 2018',
+    companyName : 'CodeKul Private Limited',
+    companyRoad :'Paud Road, Kothrud Depot',
+    postalDetails : 'Bandal Capital, 411038',
+    checkPrice : 5000,
+    wbDsPrice : 8963,
+    hstPrice : 91588,
+    dmnPr : 8951,
+    total : 988344
+})
