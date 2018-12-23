@@ -18,4 +18,26 @@
     <p>Temp {{weather?.main.temp}}</p>
   </div>
 </div>
-
+<div class="row">
+  <div class="col-md-12">
+    <form (ngSubmit)="onSubmit(frm.value)" #frm="ngForm">
+      <input type="text" name="name" ngModel placeholder="name">
+      <input type="text" name="age" ngModel placeholder="age">
+      <input type="text" name="sal" ngModel placeholder="sal">
+      <input type="submit" value="Okay" class="btn btn-primary">
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="list-group" *ngFor="let stu of stuRes?.students">
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{stu.name}}</h5>
+          <small>{{stu.age}}</small>
+        </div>
+        <small>{{stu.sal}}</small>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+import { StuRes } from './student-res';
+import { Student } from './student';
 import { WeatherService } from './weather.service';
 import { Observable, Subscription } from 'rxjs';
 import { interval } from 'rxjs';
@@ -12,7 +14,7 @@ import { WeatherMain } from './weather';
 export class HttpComponent implements OnInit, OnDestroy {
 
   weather : WeatherMain
-
+  stuRes : StuRes
   cnt : number = 0
   private chatSub : Subscription
   private intSub : Subscription
@@ -30,6 +32,10 @@ export class HttpComponent implements OnInit, OnDestroy {
 
    this.intSub = interval(2000).subscribe(
      cnt => this.cnt++
+   )
+
+   this.weatherService.students().subscribe(
+     res => this.stuRes = res as StuRes
    )
   }
 
@@ -52,6 +58,13 @@ export class HttpComponent implements OnInit, OnDestroy {
   onWeather(city : string) {
     this.weatherService.weatherInfo(city).subscribe(
       res => this.weather = res as WeatherMain
+    )
+  }
+
+  onSubmit(stu : Student) {
+    console.log(stu)
+    this.weatherService.postInfo(stu).subscribe(
+      res => this.stuRes = res as StuRes
     )
   }
 }

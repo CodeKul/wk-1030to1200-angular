@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class WeatherService {
 
+
   constructor(
     private http : HttpClient
   ) { }
@@ -17,11 +18,15 @@ export class WeatherService {
   }
 
   postInfo( stu : Student) : Observable<Object> {
-    return this.http.post('link', stu , {
+    return this.http.post('http://localhost:3000/student', stu , {
       headers :  {
         'Accept' : 'application/json',
         'Content-Type' :'application/json'
       }
     })
+  }
+
+  students() :  Observable<Object> {
+    return this.http.get('http://localhost:3000/students')
   }
 }
