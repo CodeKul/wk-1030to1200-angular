@@ -18,6 +18,11 @@ export class HttpComponent implements OnInit, OnDestroy {
   cnt : number = 0
   private chatSub : Subscription
   private intSub : Subscription
+  cnf = {
+    uploadAPI: {
+      url:'http://localhost:3000/fileUpload'
+    }
+  }
 
   constructor(
     private weatherService : WeatherService
